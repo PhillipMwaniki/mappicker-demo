@@ -8,21 +8,23 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-md-12">
                 @foreach ($pickers as $picker)
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                    <div class="col-md-3 ml-1">
+                        <div class="card">
+                        <img src="/images/{{ $picker->mtrimage }}" style="min-height: 150px;" class="card-img-top img-responsive">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $picker->name }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Age is {{ $picker->age }}</h6>
+                                <a href="#" class="card-link">View location on map</a>
+                            </div>
                         </div>
                     </div>
                 @endforeach
-            </div>
+        </div>
+        <div class="row">
+            <div class="container mt-5 pull-right">{{ $pickers->links() }}</div>
         </div>
     </div>
 </body>

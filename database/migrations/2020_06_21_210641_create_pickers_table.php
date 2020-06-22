@@ -19,7 +19,7 @@ class CreatePickersTable extends Migration
             $table->string('age');
             $table->string('lat');
             $table->string('lng');
-            $table->binary('mtrimage');
+            $table->string('mtrimage');
             $table->timestamps();
         });
     }
