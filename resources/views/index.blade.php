@@ -17,7 +17,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $picker->name }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Age is {{ $picker->age }}</h6>
-                                <a href="#" class="card-link">View location on map</a>
+                                <h6 class="card-subtitle mb-2">LAT: {{ $picker->lat }}</h6>
+                                <h6 class="card-subtitle mb-2">LNG: {{ $picker->lng }}</h6>
                             </div>
                         </div>
                     </div>
